@@ -15,4 +15,4 @@ install:
     - nuget install TestStack.White -Version 0.13.3 -OutputDirectory WhiteTestDirectory
     - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
 script: 
-    - xbuild /p:Configuration=Debug UKPO2.sln
+    - xbuild /p:Configuration=Release UKPO2.sln
