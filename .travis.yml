@@ -3,16 +3,13 @@ sudo: required
 
 solution: UKPO2.sln
 
-os: 
-    - linux
-
-
-mono:
-    - 3.12.0
-    
+before_install:
+    - sudo apt-get install nunit-console
 install:
     - nuget restore UKPO2.sln
     - nuget install TestStack.White -Version 0.13.3 -OutputDirectory WhiteTestDirectory
     - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
+before_script:
+  - nuget restore solution-name.sln
 script: 
     - xbuild /p:Configuration=Debug UKPO2.sln
