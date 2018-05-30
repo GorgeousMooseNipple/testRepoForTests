@@ -9,10 +9,9 @@ os:
 
 mono:
     - 3.12.0
-    - latest
     
 install:
-    - mono ./nuget.exe install TestStack.White -Version latest -OutputDirectory DNAGraphTests
+    - mono ./nuget.exe Install-Package TestStack.White -Version 0.13.3 -OutputDirectory WhiteTestDirectory
 script:
     - mkdir build
     - cd build
