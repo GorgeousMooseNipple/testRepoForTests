@@ -4,14 +4,15 @@ sudo: required
 solution: UKPO2.sln
 
 os: 
-    -linux
+    - linux
 
 
 mono:
-    -latest
+    - 3.12.0
+    - latest
     
 install:
-    -mono ./nuget.exe install TestStack.White -Version latest -OutputDirectory DNAGraphTests
+    - mono ./nuget.exe install TestStack.White -Version latest -OutputDirectory DNAGraphTests
 script:
-    -mkdir build
-    -cd build
+    - mkdir build
+    - cd build
