@@ -1,0 +1,14 @@
+language: csharp
+
+solution: UKPO2.sln
+
+os: 
+    -linux
+mono:
+    -latest
+    
+install:
+    -mono ./nuget.exe install TestStack.White -Version latest -OutputDirectory DNAGraphTests
+script:
+    -mkdir buil
+    -cd build
